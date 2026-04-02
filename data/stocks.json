@@ -1,4 +1,31 @@
 {
-  "_note": "Auto-updated by GitHub Actions every 15 min during market hours (Mon-Fri 9am-5pm ET). Do not edit manually.",
-  "updated": null
+  "TSLA": {
+    "error": "HTTP Error 429: Too Many Requests",
+    "name": "Tesla"
+  },
+  "INTC": {
+    "error": "HTTP Error 429: Too Many Requests",
+    "name": "Intel"
+  },
+  "NVDA": {
+    "error": "HTTP Error 429: Too Many Requests",
+    "name": "NVIDIA"
+  },
+  "SCHD": {
+    "error": "HTTP Error 429: Too Many Requests",
+    "name": "Schwab Dividend"
+  },
+  "FXAIX": {
+    "error": "HTTP Error 429: Too Many Requests",
+    "name": "Fidelity S&P 500"
+  },
+  "MAGS": {
+    "error": "HTTP Error 429: Too Many Requests",
+    "name": "Magnificent 7 ETF"
+  },
+  "FBTC": {
+    "error": "HTTP Error 429: Too Many Requests",
+    "name": "Fidelity Crypto"
+  },
+  "updated": "2026-04-02T20:00:44.465663+00:00"
 }
