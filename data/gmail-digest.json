@@ -1,8 +1,52 @@
 {
-  "_note": "Updated daily by a scheduled Claude task.",
-  "updated": null,
-  "unread_count": 0,
-  "summary": "",
-  "items": [],
-  "unsubscribe_candidates": []
+  "updated": "2026-04-02T20:15:00-05:00",
+  "unread_count": 6,
+  "summary": "6 unread emails today, mostly community notifications from The Agentic Lab and AI newsletters. One item needs your attention: a Texas vehicle registration notice from January says your 2014 Mazda registration expired in December 2025 — that's likely 3 months overdue and worth handling today. No emails require a direct reply.",
+  "items": [
+    {
+      "sender": "Texas DMV (no-reply@txt.texas.gov)",
+      "subject": "It's time to renew your registration",
+      "snippet": "Your 2014 Mazda (VIN ending 1256) registration expired end of December 2025 — renewal notice sent January 4th.",
+      "important": true,
+      "category": "notification"
+    },
+    {
+      "sender": "The Agentic Lab (Skool)",
+      "subject": "1 new notification since 3:04 pm (Apr 2, 2026)",
+      "snippet": "Roman Colman posted a Claude Code Leak 80-page deep dive summary in the community.",
+      "important": false,
+      "category": "notification"
+    },
+    {
+      "sender": "The Agentic Lab",
+      "subject": "Roman Colman posted \"Claude Code Leaks (NEW VIDEO)\"",
+      "snippet": "New video breaking down all 512k lines of Claude Code TypeScript source.",
+      "important": false,
+      "category": "notification"
+    },
+    {
+      "sender": "Pioneerlands",
+      "subject": "This week on Pioneerlands: March 26 - April 2, 2026",
+      "snippet": "Weekly AI roundup — AI is already coding itself, plus other highlights from the week.",
+      "important": false,
+      "category": "newsletter"
+    },
+    {
+      "sender": "CS50 Course Staff (edX)",
+      "subject": "CS50B, CS50 2D, CS50x Puzzle Day, and more",
+      "snippet": "Course updates and upcoming CS50 events including Puzzle Day.",
+      "important": false,
+      "category": "notification"
+    },
+    {
+      "sender": "The Neuron",
+      "subject": "We're LIVE: From \"I Ask ChatGPT Things\" to 10 Hours Saved / Wk",
+      "snippet": "AI newsletter covering productivity tips and a new podcast episode for beginners.",
+      "important": false,
+      "category": "newsletter"
+    }
+  ],
+  "unsubscribe_candidates": [
+    "The Neuron <theneuron@newsletter.theneurondaily.com>"
+  ]
 }
