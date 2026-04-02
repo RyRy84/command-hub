@@ -1,31 +1,52 @@
 {
   "TSLA": {
-    "error": "HTTP Error 429: Too Many Requests",
+    "price": 360.59,
+    "prev_close": 380.913,
+    "change": -20.323,
+    "change_pct": -5.3353,
     "name": "Tesla"
   },
   "INTC": {
-    "error": "HTTP Error 429: Too Many Requests",
+    "price": 50.38,
+    "prev_close": 48.1601,
+    "change": 2.2199,
+    "change_pct": 4.6094,
     "name": "Intel"
   },
   "NVDA": {
-    "error": "HTTP Error 429: Too Many Requests",
+    "price": 177.39,
+    "prev_close": 176.0799,
+    "change": 1.3101,
+    "change_pct": 0.744,
     "name": "NVIDIA"
   },
   "SCHD": {
-    "error": "HTTP Error 429: Too Many Requests",
+    "price": 30.56,
+    "prev_close": 30.52,
+    "change": 0.04,
+    "change_pct": 0.1311,
     "name": "Schwab Dividend"
   },
   "FXAIX": {
-    "error": "HTTP Error 429: Too Many Requests",
+    "price": 229.04,
+    "prev_close": 227.41,
+    "change": 1.63,
+    "change_pct": 0.7168,
     "name": "Fidelity S&P 500"
   },
   "MAGS": {
-    "error": "HTTP Error 429: Too Many Requests",
+    "price": 58.27,
+    "prev_close": 58.59,
+    "change": -0.32,
+    "change_pct": -0.5462,
     "name": "Magnificent 7 ETF"
   },
   "FBTC": {
-    "error": "HTTP Error 429: Too Many Requests",
+    "price": 58.36,
+    "prev_close": 59.25,
+    "change": -0.89,
+    "change_pct": -1.5021,
     "name": "Fidelity Crypto"
   },
-  "updated": "2026-04-02T20:00:44.465663+00:00"
+  "updated": "2026-04-02T20:23:31.419645+00:00"
 }
