@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Command Hub</title>
+<style>
+:root {
+  --bg-deep: #080c12;
+  --bg: #0d1117;
+  --card: #161b22;
+  --border: #21262d;
+  --border-muted: #1a1f26;
+  --text: #e6edf3;
+  --text-muted: #7d8590;
+  --text-subtle: #484f58;
+  --accent: #58a6ff;
+  --accent-dim: #1f3d5c;
+  --green: #3fb950;
+  --green-dim: #1a3d22;
+  --red: #f85149;
+  --red-dim: #3d1a19;
+  --yellow: #d29922;
+  --yellow-dim: #3d2e10;
+  --radius: 10px;
+  --radius-sm: 6px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--bg-deep);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.brand { display:flex; align-items:center; gap:10px; }
+.brand h1 { font-size:15px; font-weight:700; letter-spacing:3px; color:var(--accent); }
+.live-dot {
+  width:8px; height:8px; border-radius:50%;
+  background:var(--green);
+  animation: pulse 2.5s infinite;
+}
+@keyframes pulse {
+  0%,100% { box-shadow:0 0 0 0 rgba(63,185,80,.5); }
+  50% { box-shadow:0 0 0 5px rgba(63,185,80,0); }
+}
+.header-right { text-align:right; }
+.clock { font-size:22px; font-weight:300; font-variant-numeric:tabular-nums; letter-spacing:1px; }
+.clock-date { font-size:11px; color:var(--text-muted); margin-top:1px; }
+.greeting-bar {
+  padding:18px 20px 4px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.greeting { font-size:20px; font-weight:400; }
+.greeting em { font-style:normal; color:var(--accent); }
+.refresh-info { font-size:11px; color:var(--text-subtle); }
+.dashboard {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'weather commute'
+    'stocks stocks'
+    'gmail watchlater'
+    'shopping tasks'
+    'ideas ideas';
+  gap:12px;
+  padding:14px 20px;
+  max-width:1400px;
+  margin:0 auto;
+}
+@media(max-width:700px) {
+  .dashboard {
+    grid-template-columns:1fr;
+    grid-template-areas:'weather''commute''stocks''gmail''watchlater''shopping''tasks''ideas';
+  }
+}
+@media(min-width:1100px) {
+  .dashboard {
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-areas:
+      'weather commute commute'
+      'stocks stocks stocks'
+      'gmail watchlater tasks'
+      'shopping shopping ideas';
+  }
+}
+.card {
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:16px;
+  transition:border-color .15s;
+}
+.card:hover { border-color:var(--text-subtle); }
+.card-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }
+.card-title { font-size:10px; font-weight:700; letter-spacing:1.8px; text-transform:uppercase; color:var(--text-muted); }
+.badge {
+  font-size:10px; padding:2px 8px; border-radius:12px;
+  background:var(--border); color:var(--text-muted);
+  text-decoration:none; white-space:nowrap;
+}
+.badge.live { background:var(--green-dim); color:var(--green); }
+.badge.warn { background:var(--yellow-dim); color:var(--yellow); }
+.badge.lnk { transition:background .15s; }
+.badge.lnk:hover { background:var(--accent-dim); color:var(--accent); }
+.skeleton {
+  background:linear-gradient(90deg,var(--border) 0%,var(--border-muted) 50%,var(--border) 100%);
+  background-size:200% 100%;
+  animation:shimmer 1.5s infinite;
+  border-radius:4px; height:14px; margin-bottom:8px;
+}
+@keyframes shimmer { 0%{background-position:200% 0}100%{background-position:-200% 0} }
+.weather-card { grid-area:weather; }
+.weather-main { display:flex; align-items:flex-start; justify-content:space-between; }
+.w-temp { font-size:44px; font-weight:200; line-height:1; }
+.w-unit { font-size:22px; color:var(--text-muted); }
+.w-desc { font-size:13px; color:var(--text-muted); margin-top:4px; }
+.w-icon { font-size:42px; line-height:1; }
+.w-row { display:flex; gap:16px; margin-top:14px; flex-wrap:wrap; }
+.w-stat strong { display:block; font-size:13px; color:var(--text); }
+.w-stat span { font-size:11px; color:var(--text-muted); }
+.commute-card { grid-area:commute; }
+.c-link {
+  display:flex; align-items:center; gap:12px;
+  text-decoration:none; color:inherit;
+  padding:10px 12px; border-radius:var(--radius-sm);
+  background:var(--bg); border:1px solid var(--border-muted);
+  margin-bottom:8px; transition:border-color .15s,background .15s;
+}
+.c-link:hover { border-color:var(--accent); background:var(--accent-dim); }
+.c-icon { font-size:24px; }
+.c-info { flex:1; }
+.c-label { font-size:11px; color:var(--text-subtle); }
+.c-dest { font-size:14px; font-weight:500; }
+.c-arrow { color:var(--text-subtle); font-size:18px; }
+.c-note { font-size:11px; color:var(--text-subtle); margin-top:4px; }
+.stocks-card { grid-area:stocks; }
+.ptotal-row { display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
+.ptotal-label { font-size:11px; color:var(--text-muted); }
+.ptotal-val { font-size:28px; font-weight:300; }
+.ptotal-sub { font-size:12px; margin-top:2px; }
+.stocks-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(155px,1fr)); gap:8px; }
+.stock-item {
+  background:var(--bg); border:1px solid var(--border-muted);
+  border-radius:var(--radius-sm);
+  padding:10px 12px; border-left-width:3px;
+}
+.stock-item.up { border-left-color:var(--green); }
+.stock-item.dn { border-left-color:var(--red); }
+.stock-item.fl { border-left-color:var(--text-subtle); }
+.s-ticker { font-size:11px; font-weight:700; letter-spacing:.5px; color:var(--text-muted); }
+.s-name { font-size:10px; color:var(--text-subtle); margin-bottom:7px; }
+.s-price { font-size:19px; font-weight:400; font-variant-numeric:tabular-nums; }
+.s-change { font-size:11px; margin-top:3px; font-variant-numeric:tabular-nums; }
+.stock-item.up .s-change { color:var(--green); }
+.stock-item.dn .s-change { color:var(--red); }
+.stock-item.fl .s-change { color:var(--text-subtle); }
+.stocks-footer { margin-top:10px; font-size:11px; color:var(--text-subtle); display:flex; justify-content:space-between; align-items:center; }
+.cfg-btn { background:none; border:none; color:var(--accent); font-size:11px; cursor:pointer; padding:0; }
+.pcfg { display:none; margin-top:14px; padding-top:14px; border-top:1px solid var(--border); }
+.pcfg.open { display:block; }
+.pcfg p { font-size:12px; color:var(--text-muted); margin-bottom:10px; }
+.pr { display:grid; grid-template-columns:70px 1fr 1fr; gap:6px; align-items:center; margin-bottom:5px; }
+.pl { font-size:11px; font-weight:600; color:var(--text-muted); }
+.pi {
+  background:var(--bg); border:1px solid var(--border);
+  border-radius:4px; color:var(--text); font-size:12px; padding:4px 8px; width:100%;
+}
+.pi:focus { outline:none; border-color:var(--accent); }
+.psave {
+  margin-top:8px; background:var(--accent); color:#000;
+  border:none; border-radius:4px; padding:6px 18px;
+  font-size:12px; font-weight:600; cursor:pointer;
+}
+.psave:hover { opacity:.85; }
+.gmail-card { grid-area:gmail; }
+.empty { color:var(--text-subtle); font-size:13px; text-align:center; padding:20px 0; line-height:1.8; }
+.d-summary { font-size:13px; color:var(--text-muted); line-height:1.6; margin-bottom:12px; padding-bottom:12px; border-bottom:1px solid var(--border); }
+.d-item { padding:7px 0; border-bottom:1px solid var(--border-muted); }
+.d-item:last-child { border-bottom:none; }
+.d-sender { font-size:12px; font-weight:600; }
+.d-subject { font-size:12px; color:var(--text-muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.d-tag { display:inline-block; font-size:10px; padding:1px 5px; border-radius:3px; margin-left:5px; background:var(--yellow-dim); color:var(--yellow); vertical-align:middle; }
+.d-unsub { margin-top:10px; padding:8px 10px; background:var(--red-dim); border-radius:var(--radius-sm); font-size:12px; color:var(--red); }
+.watchlater-card { grid-area:watchlater; }
+.vid {
+  display:flex; gap:10px; padding:8px 0;
+  border-bottom:1px solid var(--border-muted);
+  text-decoration:none; color:inherit;
+}
+.vid:last-of-type { border-bottom:none; }
+.vid:hover .vid-title { color:var(--accent); }
+.vid-thumb { width:60px; height:34px; object-fit:cover; border-radius:3px; background:var(--border); flex-shrink:0; }
+.vid-title { font-size:12px; line-height:1.4; }
+.vid-ch { font-size:11px; color:var(--text-subtle); margin-top:2px; }
+.yt-footer { margin-top:8px; font-size:11px; color:var(--text-subtle); }
+.shopping-card { grid-area:shopping; }
+.list-ul { list-style:none; }
+.list-li { display:flex; align-items:center; gap:8px; padding:6px 0; border-bottom:1px solid var(--border-muted); font-size:13px; }
+.list-li:last-child { border-bottom:none; }
+.list-li::before { content:'\2022'; color:var(--accent); font-size:16px; line-height:1; flex-shrink:0; }
+.tasks-card { grid-area:tasks; }
+.task { display:flex; align-items:flex-start; gap:8px; padding:7px 0; border-bottom:1px solid var(--border-muted); font-size:13px; }
+.task:last-child { border-bottom:none; }
+.tdot { width:7px; height:7px; border-radius:50%; background:var(--accent); margin-top:4px; flex-shrink:0; }
+.tdot.urgent { background:var(--red); }
+.tdot.soon { background:var(--yellow); }
+.ttext { flex:1; }
+.tdue { font-size:11px; color:var(--text-subtle); margin-top:1px; }
+.ideas-card { grid-area:ideas; }
+.ideas-form { display:flex; gap:8px; }
+.ideas-input {
+  flex:1; background:var(--bg); border:1px solid var(--border);
+  border-radius:var(--radius-sm); color:var(--text);
+  font-size:14px; padding:10px 14px; outline:none;
+  transition:border-color .15s;
+}
+.ideas-input:focus { border-color:var(--accent); }
+.ideas-input::placeholder { color:var(--text-subtle); }
+.ideas-btn {
+  background:var(--accent); color:#000; border:none;
+  border-radius:var(--radius-sm); padding:10px 20px;
+  font-size:13px; font-weight:700; cursor:pointer; white-space:nowrap;
+}
+.ideas-btn:hover { opacity:.85; }
+.ideas-hint { margin-top:8px; font-size:11px; color:var(--text-subtle); }
+.config-panel { max-width:1400px; margin:16px auto 0; padding:0 20px; }
+details { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:16px; }
+summary { cursor:pointer; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-muted); }
+.cfg-body { margin-top:14px; display:grid; gap:10px; }
+.cfg-label { font-size:11px; color:var(--text-muted); display:block; margin-bottom:4px; }
+.cfg-input { background:var(--bg); border:1px solid var(--border); border-radius:4px; color:var(--text); font-size:13px; padding:6px 10px; width:100%; max-width:500px; }
+.cfg-input:focus { outline:none; border-color:var(--accent); }
+.cfg-note { font-size:11px; color:var(--text-subtle); }
+a { color:var(--accent); }
+::-webkit-scrollbar { width:5px; }
+::-webkit-scrollbar-track { background:var(--bg); }
+::-webkit-scrollbar-thumb { background:var(--border); border-radius:3px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="live-dot"></div>
+    <h1>COMMAND HUB</h1>
+  </div>
+  <div class="header-right">
+    <div class="clock" id="clock">--:--:--</div>
+    <div class="clock-date" id="clockDate">Loading...</div>
+  </div>
+</header>
+
+<div class="greeting-bar">
+  <div class="greeting" id="greeting">Good morning, <em>Ryan</em></div>
+  <div class="refresh-info" id="refreshInfo">Loading...</div>
+</div>
+
+<div class="dashboard">
+
+  <!-- WEATHER -->
+  <div class="card weather-card">
+    <div class="card-header">
+      <span class="card-title">Weather</span>
+      <span class="badge" id="wBadge">Loading</span>
+    </div>
+    <div id="wContent">
+      <div class="skeleton" style="width:60%;height:44px"></div>
+      <div class="skeleton" style="width:45%"></div>
+      <div class="skeleton" style="width:90%;margin-top:12px"></div>
+    </div>
+  </div>
+
+  <!-- COMMUTE -->
+  <div class="card commute-card">
+    <div class="card-header">
+      <span class="card-title">Commute</span>
+      <span class="badge">Intel</span>
+    </div>
+    <a id="toWork" href="https://maps.google.com" target="_blank" class="c-link">
+      <div class="c-icon">&#127970;</div>
+      <div class="c-info">
+        <div class="c-label">To Work</div>
+        <div class="c-dest" id="workDest">Set address in Config below</div>
+      </div>
+      <div class="c-arrow">&#8250;</div>
+    </a>
+    <a id="toHome" href="https://maps.google.com" target="_blank" class="c-link">
+      <div class="c-icon">&#127968;</div>
+      <div class="c-info">
+        <div class="c-label">To Home</div>
+        <div class="c-dest" id="homeDest">Set address in Config below</div>
+      </div>
+      <div class="c-arrow">&#8250;</div>
+    </a>
+    <div class="c-note">Opens live traffic in Google Maps</div>
+  </div>
+
+  <!-- STOCKS -->
+  <div class="card stocks-card">
+    <div class="card-header">
+      <span class="card-title">Portfolio</span>
+      <span class="badge" id="sBadge">Loading</span>
+    </div>
+    <div class="ptotal-row" id="ptotalRow" style="display:none">
+      <div>
+        <div class="ptotal-label">Estimated Value</div>
+        <div class="ptotal-val" id="ptotalVal">&mdash;</div>
+        <div class="ptotal-sub" id="ptotalReturn"></div>
+      </div>
+      <div style="text-align:right">
+        <div class="ptotal-label">Today's Change</div>
+        <div class="ptotal-val" id="ptotalDay">&mdash;</div>
+      </div>
+    </div>
+    <div class="stocks-grid" id="sGrid">
+      <div class="stock-item fl"><div class="skeleton"></div><div class="skeleton" style="height:20px"></div></div>
+      <div class="stock-item fl"><div class="skeleton"></div><div class="skeleton" style="height:20px"></div></div>
+      <div class="stock-item fl"><div class="skeleton"></div><div class="skeleton" style="height:20px"></div></div>
+      <div class="stock-item fl"><div class="skeleton"></div><div class="skeleton" style="height:20px"></div></div>
+      <div class="stock-item fl"><div class="skeleton"></div><div class="skeleton" style="height:20px"></div></div>
+      <div class="stock-item fl"><div class="skeleton"></div><div class="skeleton" style="height:20px"></div></div>
+      <div class="stock-item fl"><div class="skeleton"></div><div class="skeleton" style="height:20px"></div></div>
+    </div>
+    <div class="stocks-footer">
+      <span id="sFooter">Auto-updates every 15 min via GitHub Actions (market hours)</span>
+      <button class="cfg-btn" onclick="togglePcfg()">&#9881; Positions</button>
+    </div>
+    <div class="pcfg" id="pcfg">
+      <p>Enter your share counts to track portfolio value. Saved in your browser only &mdash; never sent anywhere.</p>
+      <div class="pr" style="font-size:10px;color:var(--text-subtle);margin-bottom:6px">
+        <div>Ticker</div><div>Shares</div><div>Avg Cost $</div>
+      </div>
+      <div id="pcfgInputs"></div>
+      <button class="psave" onclick="savePortfolio()">Save Positions</button>
+    </div>
+  </div>
+
+  <!-- GMAIL -->
+  <div class="card gmail-card">
+    <div class="card-header">
+      <span class="card-title">Gmail Digest</span>
+      <span class="badge" id="gBadge">Pending setup</span>
+    </div>
+    <div id="gContent">
+      <div class="empty">&#128231; Your daily email digest will appear here.<br>The morning summary task will be configured next.</div>
+    </div>
+  </div>
+
+  <!-- WATCH LATER -->
+  <div class="card watchlater-card">
+    <div class="card-header">
+      <span class="card-title">Watch Later Queue</span>
+      <span class="badge" id="yBadge">Pending setup</span>
+    </div>
+    <div id="yContent">
+      <div class="empty">&#9654;&#65039; Your YouTube Watch Later queue will sync here.<br>Claude reads it daily and updates this list.</div>
+    </div>
+  </div>
+
+  <!-- SHOPPING -->
+  <div class="card shopping-card">
+    <div class="card-header">
+      <span class="card-title">Shopping List</span>
+      <a href="https://keep.google.com" target="_blank" class="badge lnk">Open Keep &#8599;</a>
+    </div>
+    <div id="shopContent">
+      <div class="empty">&#128722; Your Google Keep list will sync here.<br>Claude checks it on a schedule and updates this view.</div>
+    </div>
+  </div>
+
+  <!-- TASKS -->
+  <div class="card tasks-card">
+    <div class="card-header">
+      <span class="card-title">Reminders</span>
+      <a href="https://calendar.google.com" target="_blank" class="badge lnk">Calendar &#8599;</a>
+    </div>
+    <div id="taskContent">
+      <div class="task"><div class="tdot urgent"></div><div class="ttext"><div>Take out trash</div><div class="tdue">Monday mornings before 7am</div></div></div>
+      <div class="task"><div class="tdot soon"></div><div class="ttext"><div>Mow the lawn</div><div class="tdue">Weekly</div></div></div>
+      <div class="task"><div class="tdot"></div><div class="ttext"><div>Check the mail</div><div class="tdue">Daily</div></div></div>
+      <div class="task"><div class="tdot soon"></div><div class="ttext"><div>Lottery ticket renewal</div><div class="tdue">Monthly</div></div></div>
+      <div style="margin-top:10px;font-size:11px;color:var(--text-subtle)">Google Calendar smart reminders coming in Phase 2.</div>
+    </div>
+  </div>
+
+  <!-- IDEAS -->
+  <div class="card ideas-card">
+    <div class="card-header">
+      <span class="card-title">Capture an Idea</span>
+      <a href="https://github.com/RyRy84/project-management" target="_blank" class="badge lnk">View projects &#8599;</a>
+    </div>
+    <div class="ideas-form">
+      <input type="text" class="ideas-input" id="ideaInput"
+        placeholder="Type an idea or note and hit Enter..."
+        onkeydown="if(event.key==='Enter')captureIdea()">
+      <button class="ideas-btn" onclick="captureIdea()">Capture &#8594;</button>
+    </div>
+    <div class="ideas-hint">Opens GitHub to save your idea as an issue in your project-management repo.</div>
+  </div>
+
+</div>
+
+<!-- CONFIG PANEL -->
+<div class="config-panel">
+  <details>
+    <summary>&#9881; Dashboard Configuration</summary>
+    <div class="cfg-body">
+      <div>
+        <label class="cfg-label">Work Address (for commute link)</label>
+        <input id="cfgWork" type="text" class="cfg-input" placeholder="e.g. 2200 Mission College Blvd, Santa Clara, CA">
+      </div>
+      <div>
+        <label class="cfg-label">Home Address (optional)</label>
+        <input id="cfgHome" type="text" class="cfg-input" placeholder="e.g. 123 Main St, City, State">
+      </div>
+      <button class="psave" onclick="saveConfig()">Save Config</button>
+      <div class="cfg-note">All settings are stored in your browser only. Nothing is sent to any server.</div>
+    </div>
+  </details>
+</div>
+
+<script>
+const STOCKS = {
+  'TSLA':'Tesla','INTC':'Intel','NVDA':'NVIDIA',
+  'SCHD':'Schwab Div.','FXAIX':'Fidelity S&P 500',
+  'MAGS':'Mag 7 ETF','FBTC':'Fidelity Crypto'
+};
+// NOTE: Confirm tickers above match your exact holdings (esp. FXAIX, MAGS, FBTC).
+
+// --- CLOCK ---
+function tick() {
+  const n=new Date(), p=x=>String(x).padStart(2,'0');
+  document.getElementById('clock').textContent=`${p(n.getHours())}:${p(n.getMinutes())}:${p(n.getSeconds())}`;
+  const ds=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const ms=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  document.getElementById('clockDate').textContent=`${ds[n.getDay()]}, ${ms[n.getMonth()]} ${n.getDate()}, ${n.getFullYear()}`;
+  const h=n.getHours();
+  document.getElementById('greeting').innerHTML=`${h<12?'Good morning':h<17?'Good afternoon':'Good evening'}, <em>Ryan</em>`;
+}
+setInterval(tick,1000); tick();
+
+// --- WEATHER ---
+async function loadWeather(){
+  try{
+    const d=(await (await fetch('https://wttr.in/?format=j1')).json());
+    const c=d.current_condition[0],t=d.weather[0],cd=parseInt(c.weatherCode);
+    let e='&#127780;';
+    if(cd===113)e='&#9728;&#65039;';
+    else if(cd<=116)e='&#9925;';
+    else if(cd<=122)e='&#9729;&#65039;';
+    else if(cd<=143)e='&#127787;&#65039;';
+    else if(cd<=186)e='&#127783;&#65039;';
+    else if(cd<=200)e='&#9928;&#65039;';
+    else if(cd<=230)e='&#10052;&#65039;';
+    else if(cd<=299)e='&#127782;&#65039;';
+    else if(cd<=321)e='&#127783;&#65039;';
+    else if(cd<=377)e='&#127784;&#65039;';
+    else e='&#9928;&#65039;';
+    document.getElementById('wContent').innerHTML=`
+      <div class="weather-main">
+        <div>
+          <div class="w-temp">${c.temp_F}<span class="w-unit">&#176;F</span></div>
+          <div class="w-desc">${c.weatherDesc[0].value}</div>
+        </div>
+        <div class="w-icon">${e}</div>
+      </div>
+      <div class="w-row">
+        <div class="w-stat"><strong>H:${t.maxtempF}&#176; / L:${t.mintempF}&#176;</strong><span>Today</span></div>
+        <div class="w-stat"><strong>${c.FeelsLikeF}&#176;F</strong><span>Feels like</span></div>
+        <div class="w-stat"><strong>${c.humidity}%</strong><span>Humidity</span></div>
+        <div class="w-stat"><strong>${c.windspeedMiles} mph</strong><span>Wind</span></div>
+      </div>`;
+    document.getElementById('wBadge').textContent='Live';
+    document.getElementById('wBadge').className='badge live';
+  }catch(e){
+    document.getElementById('wContent').innerHTML='<div class="empty">Unable to load weather</div>';
+  }
+}
+
+// --- COMMUTE ---
+function buildCommute(){
+  const cfg=loadCfg();
+  const base='https://maps.google.com/?daddr=';
+  const tw=document.getElementById('toWork'),th=document.getElementById('toHome');
+  if(cfg.work){
+    tw.href=base+encodeURIComponent(cfg.work);
+    document.getElementById('workDest').textContent=cfg.work.split(',')[0];
+  }
+  if(cfg.home){
+    th.href=base+encodeURIComponent(cfg.home);
+    document.getElementById('homeDest').textContent=cfg.home.split(',')[0];
+  }
+}
+
+// --- STOCKS ---
+async function loadStocks(){
+  try{
+    const data=await(await fetch('./data/stocks.json?_='+Date.now())).json();
+    const port=getPortfolio();
+    const hasPt=Object.values(port).some(p=>p.shares>0);
+    let tv=0,tc=0,td=0;
+    const g=document.getElementById('sGrid');
+    g.innerHTML='';
+    buildPcfgInputs(port);
+    for(const[sym,nm] of Object.entries(STOCKS)){
+      const s=data[sym];
+      if(!s||s.error){
+        g.innerHTML+=`<div class="stock-item fl"><div class="s-ticker">${sym}</div><div class="s-name">${nm}</div><div class="s-price" style="color:var(--text-subtle)">&mdash;</div><div class="s-change" style="color:var(--text-subtle)">${s?.error?'Fetch error':'No data'}</div></div>`;
+        continue;
+      }
+      const dir=s.change>0?'up':s.change<0?'dn':'fl';
+      const sg=s.change>=0?'+':'';
+      const p=port[sym];
+      if(hasPt&&p?.shares>0){
+        tv+=s.price*p.shares;
+        tc+=p.avgCost*p.shares;
+        td+=s.change*p.shares;
+      }
+      g.innerHTML+=`<div class="stock-item ${dir}"><div class="s-ticker">${sym}</div><div class="s-name">${nm}</div><div class="s-price">$${s.price.toFixed(2)}</div><div class="s-change">${sg}$${Math.abs(s.change).toFixed(2)}&nbsp;(${sg}${s.change_pct.toFixed(2)}%)</div></div>`;
+    }
+    if(hasPt&&tv>0){
+      const gl=tv-tc,glp=tc>0?gl/tc*100:0,sg=gl>=0?'+':'';
+      const ds=td>=0?'+':'';
+      document.getElementById('ptotalRow').style.display='flex';
+      document.getElementById('ptotalVal').textContent='$'+tv.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+      document.getElementById('ptotalReturn').innerHTML=`<span style="color:var(--${gl>=0?'green':'red'})">${sg}$${Math.abs(gl).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})} (${sg}${glp.toFixed(2)}%) total return</span>`;
+      document.getElementById('ptotalDay').innerHTML=`<span style="color:var(--${td>=0?'green':'red'})">${ds}$${Math.abs(td).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}</span>`;
+    }
+    const b=document.getElementById('sBadge');
+    if(data.updated){
+      const mins=Math.round((Date.now()-new Date(data.updated).getTime())/60000);
+      b.textContent=mins<2?'Just updated':`${mins}m ago`;
+      b.className=mins<20?'badge live':'badge';
+      document.getElementById('sFooter').textContent=`Last: ${new Date(data.updated).toLocaleTimeString()} &#183; Auto-updates every 15min (market hours)`;
+    }else{
+      b.textContent='Awaiting first run';
+      b.className='badge warn';
+      document.getElementById('sFooter').textContent='GitHub Actions will populate prices on its first scheduled run.';
+    }
+  }catch(e){
+    document.getElementById('sGrid').innerHTML='<div style="color:var(--text-muted);font-size:13px;grid-column:1/-1;padding:12px 0">Prices appear after GitHub Actions runs for the first time during market hours.</div>';
+    document.getElementById('sBadge').textContent='Not yet available';
+  }
+}
+function getPortfolio(){try{return JSON.parse(localStorage.getItem('cmd_pt')||'{}')}catch{return{}}}
+function buildPcfgInputs(pt){
+  const el=document.getElementById('pcfgInputs');
+  if(el.children.length)return;
+  for(const[sym,nm] of Object.entries(STOCKS)){
+    const p=pt[sym]||{};
+    el.innerHTML+=`<div class="pr"><div class="pl">${sym}</div><input class="pi" id="ps-${sym}" type="number" min="0" step="any" placeholder="0" value="${p.shares||''}"><input class="pi" id="pc-${sym}" type="number" min="0" step="any" placeholder="0.00" value="${p.avgCost||''}"></div>`;
+  }
+}
+function savePortfolio(){
+  const d={};
+  for(const s of Object.keys(STOCKS))d[s]={shares:parseFloat(document.getElementById(`ps-${s}`)?.value||0),avgCost:parseFloat(document.getElementById(`pc-${s}`)?.value||0)};
+  localStorage.setItem('cmd_pt',JSON.stringify(d));
+  togglePcfg();
+  loadStocks();
+}
+function togglePcfg(){document.getElementById('pcfg').classList.toggle('open');}
+
+// --- GMAIL ---
+async function loadGmail(){
+  try{
+    const d=await(await fetch('./data/gmail-digest.json?_='+Date.now())).json();
+    if(!d.items?.length)return;
+    const b=document.getElementById('gBadge');
+    b.textContent=`${d.unread_count||d.items.length} emails`;
+    b.className='badge live';
+    let h='';
+    if(d.summary)h+=`<div class="d-summary">${d.summary}</div>`;
+    for(const i of d.items.slice(0,7)){
+      h+=`<div class="d-item"><div class="d-sender">${i.sender}${i.important?'<span class="d-tag">&#9889; important</span>':''}</div><div class="d-subject">${i.subject}</div></div>`;
+    }
+    if(d.unsubscribe_candidates?.length)h+=`<div class="d-unsub">&#128064; ${d.unsubscribe_candidates.length} sender(s) you haven't opened in 30+ days</div>`;
+    if(d.updated)h+=`<div style="margin-top:8px;font-size:11px;color:var(--text-subtle)">Updated ${new Date(d.updated).toLocaleTimeString()}</div>`;
+    document.getElementById('gContent').innerHTML=h;
+  }catch(e){}
+}
+
+// --- WATCH LATER ---
+async function loadWatchLater(){
+  try{
+    const d=await(await fetch('./data/watch-later.json?_='+Date.now())).json();
+    if(!d.videos?.length)return;
+    const b=document.getElementById('yBadge');
+    b.textContent=`${d.videos.length} videos`;
+    b.className='badge live';
+    let h='';
+    for(const v of d.videos.slice(0,10)){
+      h+=`<a href="${v.url}" target="_blank" class="vid">${v.thumbnail?`<img src="${v.thumbnail}" class="vid-thumb" loading="lazy" onerror="this.style.display='none'">` :'<div class="vid-thumb"></div>'}<div><div class="vid-title">${v.title}</div><div class="vid-ch">${v.channel||''}</div></div></a>`;
+    }
+    if(d.updated)h+=`<div class="yt-footer">Synced ${new Date(d.updated).toLocaleTimeString()} &#183; <a href="https://youtube.com/playlist?list=WL" target="_blank">Open Watch Later &#8599;</a></div>`;
+    document.getElementById('yContent').innerHTML=h;
+  }catch(e){}
+}
+
+// --- SHOPPING ---
+async function loadShopping(){
+  try{
+    const d=await(await fetch('./data/shopping-list.json?_='+Date.now())).json();
+    if(!d.items?.length)return;
+    document.getElementById('shopContent').innerHTML=
+      '<ul class="list-ul">'+d.items.map(i=>`<li class="list-li">${i}</li>`).join('')+'</ul>'+
+      (d.updated?`<div style="margin-top:8px;font-size:11px;color:var(--text-subtle)">Synced ${new Date(d.updated).toLocaleTimeString()} &#183; <a href="https://keep.google.com" target="_blank">Open Keep &#8599;</a></div>`:'');
+  }catch(e){}
+}
+
+// --- IDEAS ---
+function captureIdea(){
+  const inp=document.getElementById('ideaInput');
+  const v=inp.value.trim();
+  if(!v){inp.focus();return;}
+  const t=encodeURIComponent(v);
+  const b=encodeURIComponent(`**Idea:** ${v}\n\n**Captured:** ${new Date().toLocaleDateString()}\n\n**Phase:** Capture\n\n---\n*Add more context below...*`);
+  window.open(`https://github.com/RyRy84/project-management/issues/new?title=${t}&labels=idea&body=${b}`,'_blank');
+  inp.value='';
+}
+
+// --- CONFIG ---
+function loadCfg(){try{return JSON.parse(localStorage.getItem('cmd_cfg')||'{}')}catch{return{}}}
+function saveConfig(){
+  localStorage.setItem('cmd_cfg',JSON.stringify({
+    work:document.getElementById('cfgWork').value.trim(),
+    home:document.getElementById('cfgHome').value.trim()
+  }));
+  buildCommute();
+  alert('Config saved! Your commute links are updated.');
+}
+function initConfig(){
+  const c=loadCfg();
+  document.getElementById('cfgWork').value=c.work||'';
+  document.getElementById('cfgHome').value=c.home||'';
+}
+
+// --- INIT ---
+async function init(){
+  document.getElementById('refreshInfo').textContent='Refreshed at '+new Date().toLocaleTimeString();
+  loadWeather();
+  loadStocks();
+  loadGmail();
+  loadWatchLater();
+  loadShopping();
+  buildCommute();
+  initConfig();
+}
+init();
+setInterval(init,5*60*1000);
+</script>
+</body>
+</html>
