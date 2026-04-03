@@ -1,52 +1,76 @@
 {
-  "updated": "2026-04-02T20:15:00-05:00",
-  "unread_count": 6,
-  "summary": "6 unread emails today, mostly community notifications from The Agentic Lab and AI newsletters. One item needs your attention: a Texas vehicle registration notice from January says your 2014 Mazda registration expired in December 2025 — that's likely 3 months overdue and worth handling today. No emails require a direct reply.",
+  "updated": "2026-04-03T06:00:00-05:00",
+  "unread_count": 9,
+  "summary": "9 unread this morning, with a few things that need real action. That Texas vehicle registration email has been sitting unread since January — your 2014 Mazda's reg expired in December 2025, so you're now 3+ months overdue, handle that today. Your PayPal card ending in 7376 is also expired and needs updating, your FAA drone registration is coming up for renewal within 180 days, and Aiden's Microsoft Family Safety report flagged 2 search terms worth a look. No emails need a direct reply, but the registration and PayPal items are the most urgent.",
   "items": [
     {
-      "sender": "Texas DMV (no-reply@txt.texas.gov)",
+      "sender": "no-reply@txt.texas.gov",
       "subject": "It's time to renew your registration",
-      "snippet": "Your 2014 Mazda (VIN ending 1256) registration expired end of December 2025 — renewal notice sent January 4th.",
+      "snippet": "Your 2014 Mazda (VIN ending 1256) registration expired end of December 2025 — this notice was sent January 4th and is still unread, making it ~3 months overdue.",
       "important": true,
       "category": "notification"
     },
     {
-      "sender": "The Agentic Lab (Skool)",
-      "subject": "1 new notification since 3:04 pm (Apr 2, 2026)",
-      "snippet": "Roman Colman posted a Claude Code Leak 80-page deep dive summary in the community.",
+      "sender": "PayPal (service@paypal.com)",
+      "subject": "Update your expired card information for PayPal",
+      "snippet": "Your card ending in 7376 has expired and needs to be updated in your PayPal account.",
+      "important": true,
+      "category": "notification"
+    },
+    {
+      "sender": "FAA FAADroneZone (UAS.FAADroneZone@faa.gov)",
+      "subject": "UAS Registration Renewal Reminder",
+      "snippet": "Your UAS (drone) registration will expire within 180 days — renew via FAADroneZone.",
+      "important": true,
+      "category": "notification"
+    },
+    {
+      "sender": "TSO Products (info@tsoproducts.com)",
+      "subject": "Get up to 10% OFF TSO all weekend for our Easter Sale",
+      "snippet": "Easter weekend-only sale with up to 10% off sitewide — ends after the weekend.",
+      "important": true,
+      "category": "marketing"
+    },
+    {
+      "sender": "Microsoft Family Safety (familysafety@microsoft.com)",
+      "subject": "Weekly activity report for Aiden",
+      "snippet": "Mar 27–Apr 2 weekly report for Aiden (aidenknippa@gmail.com) includes 2 flagged search terms.",
       "important": false,
       "category": "notification"
     },
     {
-      "sender": "The Agentic Lab",
-      "subject": "Roman Colman posted \"Claude Code Leaks (NEW VIDEO)\"",
-      "snippet": "New video breaking down all 512k lines of Claude Code TypeScript source.",
+      "sender": "NASASpaceflight.com Shop (shop@nasaspaceflight.com)",
+      "subject": "Order #69301 confirmed",
+      "snippet": "Order #69301 is confirmed and being prepared for shipment — includes an Artemis item.",
       "important": false,
       "category": "notification"
     },
     {
-      "sender": "Pioneerlands",
-      "subject": "This week on Pioneerlands: March 26 - April 2, 2026",
-      "snippet": "Weekly AI roundup — AI is already coding itself, plus other highlights from the week.",
+      "sender": "YouTube (noreply@youtube.com)",
+      "subject": "For members only: new NASASpaceflight post",
+      "snippet": "New members-only post from NASASpaceflight channel available on YouTube.",
+      "important": false,
+      "category": "notification"
+    },
+    {
+      "sender": "The Neuron (theneuron@newsletter.theneurondaily.com)",
+      "subject": "😺 🎙️ We're LIVE: From \"I Ask ChatGPT Things\" to 10 Hours Saved / Wk",
+      "snippet": "AI productivity newsletter featuring a podcast episode and beginner episode recommendations.",
       "important": false,
       "category": "newsletter"
     },
     {
-      "sender": "CS50 Course Staff (edX)",
-      "subject": "CS50B, CS50 2D, CS50x Puzzle Day, and more",
-      "snippet": "Course updates and upcoming CS50 events including Puzzle Day.",
+      "sender": "Classmates.com (emailreplies@messages.classmates.com)",
+      "subject": "Ryan, have you seen your digital yearbook pics lately? 📖",
+      "snippet": "Classmates.com promo inviting you to explore your digital yearbook photos.",
       "important": false,
-      "category": "notification"
-    },
-    {
-      "sender": "The Neuron",
-      "subject": "We're LIVE: From \"I Ask ChatGPT Things\" to 10 Hours Saved / Wk",
-      "snippet": "AI newsletter covering productivity tips and a new podcast episode for beginners.",
-      "important": false,
-      "category": "newsletter"
+      "category": "marketing"
     }
   ],
   "unsubscribe_candidates": [
-    "The Neuron <theneuron@newsletter.theneurondaily.com>"
+    "Classmates.com <emailreplies@messages.classmates.com>",
+    "TSO Products <info@tsoproducts.com>",
+    "The Neuron <theneuron@newsletter.theneurondaily.com>",
+    "YouTube channel email notifications (NASASpaceflight members posts)"
   ]
 }
