@@ -1,76 +1,75 @@
 {
-  "updated": "2026-04-03T06:00:00-05:00",
+  "updated": "2026-04-04T05:05:17-05:00",
   "unread_count": 9,
-  "summary": "9 unread this morning, with a few things that need real action. That Texas vehicle registration email has been sitting unread since January — your 2014 Mazda's reg expired in December 2025, so you're now 3+ months overdue, handle that today. Your PayPal card ending in 7376 is also expired and needs updating, your FAA drone registration is coming up for renewal within 180 days, and Aiden's Microsoft Family Safety report flagged 2 search terms worth a look. No emails need a direct reply, but the registration and PayPal items are the most urgent.",
+  "summary": "9 unread this Saturday morning, nothing needing a direct reply. Still the most urgent: that Texas registration reminder from January is still sitting unread — your 2014 Mazda reg expired December 2025 and you're now 3+ months overdue, handle it today. TSO has an Easter sale ending tomorrow (10% off). Your Google Fi bill for $168.32 auto-pays April 13, and a Steam purchase receipt addressed to bubbyrck@yahoo.com landed here — make sure that was expected.",
   "items": [
     {
       "sender": "no-reply@txt.texas.gov",
       "subject": "It's time to renew your registration",
-      "snippet": "Your 2014 Mazda (VIN ending 1256) registration expired end of December 2025 — this notice was sent January 4th and is still unread, making it ~3 months overdue.",
+      "snippet": "Your 2014 Mazda (VIN ending 1256) registration expired end of December 2025 — sent January 4th and still unread, now ~3 months overdue.",
       "important": true,
       "category": "notification"
     },
     {
-      "sender": "PayPal (service@paypal.com)",
-      "subject": "Update your expired card information for PayPal",
-      "snippet": "Your card ending in 7376 has expired and needs to be updated in your PayPal account.",
-      "important": true,
-      "category": "notification"
-    },
-    {
-      "sender": "FAA FAADroneZone (UAS.FAADroneZone@faa.gov)",
-      "subject": "UAS Registration Renewal Reminder",
-      "snippet": "Your UAS (drone) registration will expire within 180 days — renew via FAADroneZone.",
-      "important": true,
-      "category": "notification"
-    },
-    {
-      "sender": "TSO Products (info@tsoproducts.com)",
-      "subject": "Get up to 10% OFF TSO all weekend for our Easter Sale",
-      "snippet": "Easter weekend-only sale with up to 10% off sitewide — ends after the weekend.",
+      "sender": "TSO Products <info@tsoproducts.com>",
+      "subject": "Get 10% OFF Our Newest Arrivals for the Easter Sale",
+      "snippet": "Easter weekend sale with 10% off newest arrivals — ends tomorrow, Easter Sunday April 5.",
       "important": true,
       "category": "marketing"
     },
     {
-      "sender": "Microsoft Family Safety (familysafety@microsoft.com)",
-      "subject": "Weekly activity report for Aiden",
-      "snippet": "Mar 27–Apr 2 weekly report for Aiden (aidenknippa@gmail.com) includes 2 flagged search terms.",
+      "sender": "Steam Support <noreply@steampowered.com>",
+      "subject": "Thank you for your Steam purchase!",
+      "snippet": "Steam purchase confirmation addressed to bubbyrck@yahoo.com ended up in your inbox — worth a quick check to confirm this was expected.",
       "important": false,
       "category": "notification"
     },
     {
-      "sender": "NASASpaceflight.com Shop (shop@nasaspaceflight.com)",
+      "sender": "Google Payments <payments-noreply@google.com>",
+      "subject": "Your Google Fi monthly statement",
+      "snippet": "April 2 statement totaling $168.32 — auto-payment scheduled for April 13, 2026, no action needed.",
+      "important": false,
+      "category": "notification"
+    },
+    {
+      "sender": "FAA FAADroneZone <UAS.FAADroneZone@faa.gov>",
+      "subject": "UAS Registration Renewal Reminder",
+      "snippet": "Your UAS (drone) registration will expire within 180 days — renew at FAADroneZone when ready.",
+      "important": false,
+      "category": "notification"
+    },
+    {
+      "sender": "NASASpaceflight.com <shop@nasaspaceflight.com>",
       "subject": "Order #69301 confirmed",
       "snippet": "Order #69301 is confirmed and being prepared for shipment — includes an Artemis item.",
       "important": false,
       "category": "notification"
     },
     {
-      "sender": "YouTube (noreply@youtube.com)",
-      "subject": "For members only: new NASASpaceflight post",
-      "snippet": "New members-only post from NASASpaceflight channel available on YouTube.",
+      "sender": "Sense <snapshot@ops.sense.com>",
+      "subject": "Your Energy Snapshot is ready",
+      "snippet": "March 2026 energy report: $232 used this month, 27% higher than last month, averaging $7.50/day.",
       "important": false,
       "category": "notification"
     },
     {
-      "sender": "The Neuron (theneuron@newsletter.theneurondaily.com)",
+      "sender": "The Neuron <theneuron@newsletter.theneurondaily.com>",
       "subject": "😺 🎙️ We're LIVE: From \"I Ask ChatGPT Things\" to 10 Hours Saved / Wk",
-      "snippet": "AI productivity newsletter featuring a podcast episode and beginner episode recommendations.",
+      "snippet": "AI productivity newsletter featuring a podcast episode on saving 10 hours per week with AI tools, plus beginner episode picks.",
       "important": false,
       "category": "newsletter"
     },
     {
-      "sender": "Classmates.com (emailreplies@messages.classmates.com)",
-      "subject": "Ryan, have you seen your digital yearbook pics lately? 📖",
-      "snippet": "Classmates.com promo inviting you to explore your digital yearbook photos.",
+      "sender": "Trending on Nextdoor <no-reply@rs.email.nextdoor.com>",
+      "subject": "Trending in your area today 👀: Mr.",
+      "snippet": "Daily digest of trending neighborhood posts and discussions from Nextdoor.",
       "important": false,
-      "category": "marketing"
+      "category": "notification"
     }
   ],
   "unsubscribe_candidates": [
-    "Classmates.com <emailreplies@messages.classmates.com>",
     "TSO Products <info@tsoproducts.com>",
-    "The Neuron <theneuron@newsletter.theneurondaily.com>",
-    "YouTube channel email notifications (NASASpaceflight members posts)"
+    "Trending on Nextdoor <no-reply@rs.email.nextdoor.com>",
+    "The Neuron <theneuron@newsletter.theneurondaily.com>"
   ]
 }
