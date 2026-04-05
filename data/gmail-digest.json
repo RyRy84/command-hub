@@ -1,75 +1,124 @@
 {
-  "updated": "2026-04-04T05:05:17-05:00",
-  "unread_count": 9,
-  "summary": "9 unread this Saturday morning, nothing needing a direct reply. Still the most urgent: that Texas registration reminder from January is still sitting unread — your 2014 Mazda reg expired December 2025 and you're now 3+ months overdue, handle it today. TSO has an Easter sale ending tomorrow (10% off). Your Google Fi bill for $168.32 auto-pays April 13, and a Steam purchase receipt addressed to bubbyrck@yahoo.com landed here — make sure that was expected.",
+  "updated": "2026-04-05T05:00:00-05:00",
+  "unread_count": 25,
+  "summary": "25 unread emails this morning. Most urgent: three LifeMD emails — your prescription renewal needs action and your appointment is confirmed for this Thursday, April 10 at 8:45am CDT. Your Google Fi bill of $168.32 auto-pays April 13. Heads up: that Texas vehicle registration notice from January is still sitting here — your 2014 Mazda expired in December and is now 3+ months overdue.",
   "items": [
+    {
+      "sender": "LifeMD",
+      "subject": "Action Required: It's time to renew your prescription, Ryan",
+      "snippet": "Complete a renewal survey to avoid any interruption in your treatment.",
+      "important": true,
+      "category": "notification"
+    },
+    {
+      "sender": "LifeMD",
+      "subject": "Your appointment with LifeMD is confirmed",
+      "snippet": "Your appointment is booked for April 10 at 8:45am CDT — this Thursday.",
+      "important": true,
+      "category": "notification"
+    },
+    {
+      "sender": "LifeMD",
+      "subject": "Your appointment has been rescheduled",
+      "snippet": "Your LifeMD appointment has been rescheduled — log in to the patient portal to view the updated details.",
+      "important": true,
+      "category": "notification"
+    },
+    {
+      "sender": "Google Payments",
+      "subject": "Your Google Fi monthly statement",
+      "snippet": "Your April 2 statement totals $168.32 — auto-payment scheduled for April 13, 2026.",
+      "important": true,
+      "category": "notification"
+    },
     {
       "sender": "no-reply@txt.texas.gov",
       "subject": "It's time to renew your registration",
-      "snippet": "Your 2014 Mazda (VIN ending 1256) registration expired end of December 2025 — sent January 4th and still unread, now ~3 months overdue.",
+      "snippet": "Your 2014 Mazda (VIN ending 1256) registration expired December 2025 — this notice has been sitting since January and is now 3+ months overdue.",
       "important": true,
       "category": "notification"
     },
     {
-      "sender": "TSO Products <info@tsoproducts.com>",
-      "subject": "Get 10% OFF Our Newest Arrivals for the Easter Sale",
-      "snippet": "Easter weekend sale with 10% off newest arrivals — ends tomorrow, Easter Sunday April 5.",
-      "important": true,
-      "category": "marketing"
-    },
-    {
-      "sender": "Steam Support <noreply@steampowered.com>",
-      "subject": "Thank you for your Steam purchase!",
-      "snippet": "Steam purchase confirmation addressed to bubbyrck@yahoo.com ended up in your inbox — worth a quick check to confirm this was expected.",
-      "important": false,
-      "category": "notification"
-    },
-    {
-      "sender": "Google Payments <payments-noreply@google.com>",
-      "subject": "Your Google Fi monthly statement",
-      "snippet": "April 2 statement totaling $168.32 — auto-payment scheduled for April 13, 2026, no action needed.",
-      "important": false,
-      "category": "notification"
-    },
-    {
-      "sender": "FAA FAADroneZone <UAS.FAADroneZone@faa.gov>",
+      "sender": "FAA DroneZone",
       "subject": "UAS Registration Renewal Reminder",
-      "snippet": "Your UAS (drone) registration will expire within 180 days — renew at FAADroneZone when ready.",
+      "snippet": "Your drone UAS registration will expire within 180 days — renew at FAADroneZone to stay legal.",
       "important": false,
       "category": "notification"
     },
     {
-      "sender": "NASASpaceflight.com <shop@nasaspaceflight.com>",
-      "subject": "Order #69301 confirmed",
-      "snippet": "Order #69301 is confirmed and being prepared for shipment — includes an Artemis item.",
+      "sender": "Nintendo",
+      "subject": "Information about automatic renewal",
+      "snippet": "Your Nintendo Switch Online + Expansion Pack 12-month membership is set to renew automatically.",
       "important": false,
       "category": "notification"
     },
     {
-      "sender": "Sense <snapshot@ops.sense.com>",
-      "subject": "Your Energy Snapshot is ready",
-      "snippet": "March 2026 energy report: $232 used this month, 27% higher than last month, averaging $7.50/day.",
+      "sender": "Michelle Huebner",
+      "subject": "Mrs. Davis' Class Easter Party Photos",
+      "snippet": "Class celebrated Easter Thursday with snacks and a donut Jesus tomb craft while reading Luke 24 — photos included.",
       "important": false,
-      "category": "notification"
+      "category": "personal"
     },
     {
-      "sender": "The Neuron <theneuron@newsletter.theneurondaily.com>",
-      "subject": "😺 🎙️ We're LIVE: From \"I Ask ChatGPT Things\" to 10 Hours Saved / Wk",
-      "snippet": "AI productivity newsletter featuring a podcast episode on saving 10 hours per week with AI tools, plus beginner episode picks.",
+      "sender": "YouTube",
+      "subject": "For members only: new NASASpaceflight post",
+      "snippet": "Members-only update: Flight 13 Ship 40 awaiting Ship 39's return for Static Fire before its cryo test.",
       "important": false,
       "category": "newsletter"
     },
     {
-      "sender": "Trending on Nextdoor <no-reply@rs.email.nextdoor.com>",
-      "subject": "Trending in your area today 👀: Mr.",
-      "snippet": "Daily digest of trending neighborhood posts and discussions from Nextdoor.",
+      "sender": "NASASpaceflight.com",
+      "subject": "Order #69301 confirmed",
+      "snippet": "Your NASASpaceflight shop order (Artemis item) is confirmed and being prepped for shipment.",
       "important": false,
       "category": "notification"
+    },
+    {
+      "sender": "Steam Support",
+      "subject": "Thank you for your Steam purchase!",
+      "snippet": "Steam purchase confirmed and items added to your library — note it was addressed to bubbyrck@yahoo.com.",
+      "important": false,
+      "category": "notification"
+    },
+    {
+      "sender": "Taco Bell",
+      "subject": "Success, we got your order.",
+      "snippet": "Your Taco Bell mobile order is confirmed — give your name at the drive-thru.",
+      "important": false,
+      "category": "notification"
+    },
+    {
+      "sender": "McDonald's Account Services",
+      "subject": "Thanks for placing a mobile order!",
+      "snippet": "Your McDonald's mobile order has been placed and is being prepared.",
+      "important": false,
+      "category": "notification"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Sat, 4/4 is ready to view",
+      "snippet": "You have 1 mailpiece and 1 inbound package arriving Saturday, April 4.",
+      "important": false,
+      "category": "notification"
+    },
+    {
+      "sender": "The Neuron",
+      "subject": "We're LIVE: From \"I Ask ChatGPT Things\" to 10 Hours Saved / Wk",
+      "snippet": "AI productivity newsletter with a new podcast episode on saving 10 hours/week with AI tools, plus beginner episode picks.",
+      "important": false,
+      "category": "newsletter"
     }
   ],
   "unsubscribe_candidates": [
-    "TSO Products <info@tsoproducts.com>",
-    "Trending on Nextdoor <no-reply@rs.email.nextdoor.com>",
-    "The Neuron <theneuron@newsletter.theneurondaily.com>"
+    "TSO Products (info@tsoproducts.com)",
+    "Trending on Nextdoor (no-reply@rs.email.nextdoor.com)",
+    "My Lenovo Rewards (lenovo@ecomm.lenovo.com)",
+    "Tubi (updates@watch.tubitv.com)",
+    "Tobii Gaming (noreply@tobii.com)",
+    "Pioneerlands / Pioneer Academy (no-reply@email.circle.so)",
+    "The Neuron (theneuron@newsletter.theneurondaily.com)",
+    "McDonald's Account Services (DoNotReply_US@us.mcdonalds.com)",
+    "Taco Bell (noreply@info.tacobell.com)",
+    "USPS Informed Delivery (USPSInformeddelivery@email.informeddelivery.usps.com)"
   ]
 }
