@@ -8,16 +8,16 @@
   },
   "INTC": {
     "price": 50.78,
-    "prev_close": 50.22,
-    "change": 0.56,
-    "change_pct": 1.1151,
+    "prev_close": 50.2499,
+    "change": 0.5301,
+    "change_pct": 1.0549,
     "name": "Intel"
   },
   "NVDA": {
     "price": 177.64,
-    "prev_close": 176.6707,
-    "change": 0.9693,
-    "change_pct": 0.5486,
+    "prev_close": 176.66,
+    "change": 0.98,
+    "change_pct": 0.5547,
     "name": "NVIDIA"
   },
   "SCHD": {
@@ -43,10 +43,10 @@
   },
   "FBTC": {
     "price": 60.72,
-    "prev_close": 58.33,
-    "change": 2.39,
-    "change_pct": 4.0974,
+    "prev_close": 58.4803,
+    "change": 2.2397,
+    "change_pct": 3.8298,
     "name": "Fidelity Crypto"
   },
-  "updated": "2026-04-06T20:20:24.009598+00:00"
+  "updated": "2026-04-06T20:48:26.003031+00:00"
 }
