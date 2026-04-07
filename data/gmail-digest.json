@@ -1,15 +1,8 @@
 {
-  "updated": "2026-04-06T05:05:52-05:00",
-  "unread_count": 9,
-  "summary": "9 unread this morning — pretty light day. Your LifeMD appointment was rescheduled over the weekend, so check the portal for the new time. That Texas DMV notice about your 2014 Mazda's expired December 2025 registration is still sitting here — if you haven't renewed yet, it's now 3+ months overdue. TSO Products has a last-chance Easter sale ending today, but nothing in here needs a reply from you.",
+  "updated": "2026-04-07T05:00:00-05:00",
+  "unread_count": 10,
+  "summary": "10 unread this morning, with a few things worth your attention. Your kid's school (RRCA PST) sent April event updates — there's a Frio Pop on the blacktop on April 9, just two days away. LifeMD also notified you that your appointment was rescheduled, so log into the portal to see the new time. That Texas vehicle registration for your Mazda has been expired since December 2025 and is still sitting in your inbox — probably time to actually deal with that one.",
   "items": [
-    {
-      "sender": "LifeMD",
-      "subject": "Your appointment has been rescheduled",
-      "snippet": "Your LifeMD appointment has been rescheduled — log in to the patient portal to view the updated details.",
-      "important": true,
-      "category": "notification"
-    },
     {
       "sender": "no-reply@txt.texas.gov",
       "subject": "It's time to renew your registration",
@@ -18,37 +11,30 @@
       "category": "notification"
     },
     {
-      "sender": "TSO Products",
-      "subject": "Last chance for 10% OFF for the Easter Sale!",
-      "snippet": "Today is the last day to get 10% off TSO products for their Easter sale.",
+      "sender": "PayPal",
+      "subject": "Time to pick a monthly PayPal Debit category",
+      "snippet": "Time to choose your 5% cash back category for your PayPal Debit Card for this month.",
       "important": true,
-      "category": "marketing"
-    },
-    {
-      "sender": "Michelle Huebner",
-      "subject": "Mrs. Davis' Class Easter Party Photos",
-      "snippet": "Class celebrated Easter Thursday with snacks and a donut Jesus tomb craft while reading Luke 24 — photos included.",
-      "important": false,
-      "category": "personal"
-    },
-    {
-      "sender": "The Neuron",
-      "subject": "😸 Could you do what he did?",
-      "snippet": "AI newsletter covering Microsoft Copilot being labeled 'for entertainment only' and more AI news.",
-      "important": false,
-      "category": "newsletter"
-    },
-    {
-      "sender": "Sonic Drive-In",
-      "subject": "Your Sonic Order has been Confirmed!",
-      "snippet": "Order #1000424790058 placed for pickup April 5 at 8:28 PM is confirmed.",
-      "important": false,
       "category": "notification"
     },
     {
-      "sender": "FAA DroneZone",
-      "subject": "UAS Registration Renewal Reminder",
-      "snippet": "Your UAS drone registration will expire within 180 days — renew at FAADroneZone to stay compliant.",
+      "sender": "Michelle Huebner",
+      "subject": "RRCA PST April Updates",
+      "snippet": "School parent update with upcoming events including a Frio Pop on the blacktop on April 9 and other April calendar items.",
+      "important": true,
+      "category": "personal"
+    },
+    {
+      "sender": "LifeMD",
+      "subject": "Your appointment has been rescheduled",
+      "snippet": "Your LifeMD appointment has been rescheduled — log in to the patient portal to view the updated details.",
+      "important": true,
+      "category": "notification"
+    },
+    {
+      "sender": "NASASpaceflight.com",
+      "subject": "A shipment from order #69301 is on the way",
+      "snippet": "Your NASASpaceflight.com order #69301 is en route — track via DHL eCommerce.",
       "important": false,
       "category": "notification"
     },
@@ -60,15 +46,36 @@
       "category": "notification"
     },
     {
+      "sender": "FAA DroneZone",
+      "subject": "UAS Registration Renewal Reminder",
+      "snippet": "Your UAS drone registration will expire within 180 days — renew at FAADroneZone to stay compliant.",
+      "important": false,
+      "category": "notification"
+    },
+    {
       "sender": "The Neuron",
-      "subject": "😺 🎙️ We're LIVE: From \"I Ask ChatGPT Things\" to 10 Hours Saved / Wk",
-      "snippet": "AI productivity newsletter with a podcast episode on saving 10 hours/week using AI tools.",
+      "subject": "😺 What does OpenAI see coming",
+      "snippet": "AI newsletter covering what OpenAI predicts for the future, plus Netflix and Meta's new open-source AI compromise.",
       "important": false,
       "category": "newsletter"
+    },
+    {
+      "sender": "The Neuron",
+      "subject": "😺 🎙️ We're LIVE: From \"I Ask ChatGPT Things\" to 10 Hours Saved / Wk",
+      "snippet": "AI productivity newsletter with a podcast episode on saving 10 hours per week using AI tools.",
+      "important": false,
+      "category": "newsletter"
+    },
+    {
+      "sender": "Wheel Watchers Club",
+      "subject": "Spin Into Spring With Up to $5,000, Ryan!",
+      "snippet": "Wheel of Fortune promotional email with a spring sweepstakes for up to $5,000.",
+      "important": false,
+      "category": "marketing"
     }
   ],
   "unsubscribe_candidates": [
     "The Neuron (theneuron@newsletter.theneurondaily.com)",
-    "TSO Products (info@tsoproducts.com)"
+    "Wheel Watchers Club (WheelWatchersClub@email.wheeloffortune.com)"
   ]
 }
