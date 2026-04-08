@@ -1,12 +1,19 @@
 {
-  "updated": "2026-04-07T05:00:00-05:00",
-  "unread_count": 10,
-  "summary": "10 unread this morning, with a few things worth your attention. Your kid's school (RRCA PST) sent April event updates — there's a Frio Pop on the blacktop on April 9, just two days away. LifeMD also notified you that your appointment was rescheduled, so log into the portal to see the new time. That Texas vehicle registration for your Mazda has been expired since December 2025 and is still sitting in your inbox — probably time to actually deal with that one.",
+  "updated": "2026-04-08T05:06:00-05:00",
+  "unread_count": 12,
+  "summary": "12 unread emails this morning, mostly AI/tech newsletters. The vehicle registration for your 2014 Mazda expired back in December 2025 and is now 4+ months past due — that one really needs to get handled. You've also got a rescheduled LifeMD appointment to check on in the portal, and PayPal wants you to pick your monthly 5% cash back category. The rest is a pile of TLDR and Neuron newsletters plus a shipping update on your NASASpaceflight order.",
   "items": [
     {
       "sender": "no-reply@txt.texas.gov",
       "subject": "It's time to renew your registration",
-      "snippet": "Your 2014 Mazda (VIN ending 1256) registration expired December 2025 — this notice has been sitting since January and is now 3+ months overdue.",
+      "snippet": "Your 2014 Mazda (VIN ending 1256) registration expired December 2025 — this notice has been sitting since January and is now 4+ months overdue.",
+      "important": true,
+      "category": "notification"
+    },
+    {
+      "sender": "LifeMD",
+      "subject": "Your appointment has been rescheduled",
+      "snippet": "Your LifeMD appointment has been rescheduled — log in to the patient portal to view the updated details.",
       "important": true,
       "category": "notification"
     },
@@ -18,30 +25,9 @@
       "category": "notification"
     },
     {
-      "sender": "Michelle Huebner",
-      "subject": "RRCA PST April Updates",
-      "snippet": "School parent update with upcoming events including a Frio Pop on the blacktop on April 9 and other April calendar items.",
-      "important": true,
-      "category": "personal"
-    },
-    {
-      "sender": "LifeMD",
-      "subject": "Your appointment has been rescheduled",
-      "snippet": "Your LifeMD appointment has been rescheduled — log in to the patient portal to view the updated details.",
-      "important": true,
-      "category": "notification"
-    },
-    {
       "sender": "NASASpaceflight.com",
       "subject": "A shipment from order #69301 is on the way",
-      "snippet": "Your NASASpaceflight.com order #69301 is en route — track via DHL eCommerce.",
-      "important": false,
-      "category": "notification"
-    },
-    {
-      "sender": "NASASpaceflight.com",
-      "subject": "Order #69301 confirmed",
-      "snippet": "Your NASASpaceflight shop order is confirmed and being prepped for shipment.",
+      "snippet": "Your NASASpaceflight.com order #69301 is en route — DHL eCommerce tracking available.",
       "important": false,
       "category": "notification"
     },
@@ -54,28 +40,59 @@
     },
     {
       "sender": "The Neuron",
+      "subject": "😺 Too dangerous to release",
+      "snippet": "Today's AI newsletter covers a model deemed too dangerous to release, plus AI now autonomously renewing antidepressant prescriptions.",
+      "important": false,
+      "category": "newsletter"
+    },
+    {
+      "sender": "TLDR AI",
+      "subject": "OpenAI tests Image V2 🖼️, Google debuts Jules V2 🤖, analyzing OpenAI's $122B raise 💰",
+      "snippet": "OpenAI is testing its next-gen Image V2 model with early improvements in UI design rendering.",
+      "important": false,
+      "category": "newsletter"
+    },
+    {
+      "sender": "TLDR Dev",
+      "subject": "Context engineering guide ⚙️, cult of vibe coding 🗿, GitHub's reliability issues 📉",
+      "snippet": "Study shows LLM accuracy drops from 95% to 60% as tokens in context window increase, plus a context engineering guide.",
+      "important": false,
+      "category": "newsletter"
+    },
+    {
+      "sender": "TLDR",
+      "subject": "Anthropic's revenue spike 📈, Sam Altman excludes CFO💼, how Meta builds context 🤖",
+      "snippet": "Anthropic's annual revenue run-rate has spiked to $30B+, now exceeding OpenAI's $24B run-rate.",
+      "important": false,
+      "category": "newsletter"
+    },
+    {
+      "sender": "The Neuron",
       "subject": "😺 What does OpenAI see coming",
-      "snippet": "AI newsletter covering what OpenAI predicts for the future, plus Netflix and Meta's new open-source AI compromise.",
+      "snippet": "AI newsletter covering OpenAI's predictions for the future, plus Netflix and Meta's new open-source AI compromise.",
       "important": false,
       "category": "newsletter"
     },
     {
       "sender": "The Neuron",
       "subject": "😺 🎙️ We're LIVE: From \"I Ask ChatGPT Things\" to 10 Hours Saved / Wk",
-      "snippet": "AI productivity newsletter with a podcast episode on saving 10 hours per week using AI tools.",
+      "snippet": "Live podcast episode on scaling from casual ChatGPT use to saving 10 hours per week, with beginner episode recommendations.",
       "important": false,
       "category": "newsletter"
     },
     {
       "sender": "Wheel Watchers Club",
       "subject": "Spin Into Spring With Up to $5,000, Ryan!",
-      "snippet": "Wheel of Fortune promotional email with a spring sweepstakes for up to $5,000.",
+      "snippet": "Wheel of Fortune promotional spring sweepstakes for up to $5,000.",
       "important": false,
       "category": "marketing"
     }
   ],
   "unsubscribe_candidates": [
     "The Neuron (theneuron@newsletter.theneurondaily.com)",
+    "TLDR AI (dan@tldrnewsletter.com)",
+    "TLDR Dev (dan@tldrnewsletter.com)",
+    "TLDR (dan@tldrnewsletter.com)",
     "Wheel Watchers Club (WheelWatchersClub@email.wheeloffortune.com)"
   ]
 }
