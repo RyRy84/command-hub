@@ -1,8 +1,8 @@
 {
-  "updated": "2026-04-09T05:00:00-05:00",
+  "updated": "2026-04-10T05:00:00-05:00",
   "unread_count": null,
   "error": "Gmail MCP integration unavailable — the Google Workspace connector was upgraded server-side and tool definitions are stale. The scheduled task could not authenticate/call Gmail. To fix: open Cowork, reload the session (or start a new one), and re-run the digest. Previous day's data is preserved below for reference.",
-  "summary": "⚠️ Today's digest could not be fetched — the Gmail connector needs to be reloaded. Yesterday's data is shown below as a fallback. Open Cowork and start a fresh session to refresh the integration.",
+  "summary": "⚠️ Today's digest could not be fetched — the Gmail connector needs to be reloaded (same issue as yesterday). Open Cowork and start a fresh session to refresh the integration, then trigger the digest again.",
   "items": [
     {
       "sender": "no-reply@txt.texas.gov",
