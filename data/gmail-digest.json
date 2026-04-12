@@ -1,8 +1,8 @@
 {
-  "updated": "2026-04-11T05:00:00-05:00",
+  "updated": "2026-04-12T05:00:00-05:00",
   "unread_count": null,
-  "error": "Gmail MCP integration unavailable — the Google Workspace connector was upgraded server-side and tool definitions are stale. The scheduled task could not authenticate/call Gmail. To fix: open Cowork, reload the session (or start a new one), and re-run the digest. Previous day's data is preserved below for reference.",
-  "summary": "⚠️ Today's digest (Apr 11) could not be fetched — the Gmail connector needs to be reloaded. This is the second consecutive day with this issue. Open Cowork, start a fresh session to refresh the integration, then trigger the digest manually or wait for the next scheduled run. Previous items shown are from Apr 10.",
+  "error": "Gmail MCP integration unavailable — the Google Workspace connector was upgraded server-side and tool definitions are stale. The scheduled task could not call Gmail. To fix: open Cowork, start a new session to refresh the integration, then re-run the digest manually or wait for the next scheduled run.",
+  "summary": "⚠️ Today's digest (Apr 12) could not be fetched — the Gmail connector needs to be reloaded. This is now the third consecutive day with this issue. Open Cowork, start a fresh session to refresh the Google Workspace integration, then trigger the digest manually. Previous items shown are from Apr 10 and are preserved for reference.",
   "items": [
     {
       "sender": "no-reply@txt.texas.gov",
@@ -71,13 +71,6 @@
       "sender": "The Neuron",
       "subject": "😺 What does OpenAI see coming",
       "snippet": "AI newsletter covering OpenAI's predictions for the future, plus Netflix and Meta's new open-source AI compromise.",
-      "important": false,
-      "category": "newsletter"
-    },
-    {
-      "sender": "The Neuron",
-      "subject": "😺 🎙️ We're LIVE: From \"I Ask ChatGPT Things\" to 10 Hours Saved / Wk",
-      "snippet": "Live podcast episode on scaling from casual ChatGPT use to saving 10 hours per week, with beginner episode recommendations.",
       "important": false,
       "category": "newsletter"
     },
