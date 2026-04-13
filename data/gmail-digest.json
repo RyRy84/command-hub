@@ -1,92 +1,76 @@
 {
-  "updated": "2026-04-12T05:00:00-05:00",
-  "unread_count": null,
-  "error": "Gmail MCP integration unavailable — the Google Workspace connector was upgraded server-side and tool definitions are stale. The scheduled task could not call Gmail. To fix: open Cowork, start a new session to refresh the integration, then re-run the digest manually or wait for the next scheduled run.",
-  "summary": "⚠️ Today's digest (Apr 12) could not be fetched — the Gmail connector needs to be reloaded. This is now the third consecutive day with this issue. Open Cowork, start a fresh session to refresh the Google Workspace integration, then trigger the digest manually. Previous items shown are from Apr 10 and are preserved for reference.",
+  "updated": "2026-04-13T05:00:00-05:00",
+  "unread_count": 9,
+  "summary": "9 unread to kick off Monday morning. Two things need attention: there's a message waiting from LifeMD's front desk that likely needs a reply, and that Texas vehicle registration is still sitting overdue from December — the notice has been unread since January, so handle that soon. Bambu Lab is also teasing a product reveal tomorrow (April 14 at 4 PM CEST) if that's on your radar. The rest is a shipping update on a recent order, a Cults3D download notification, and the usual newsletters.",
   "items": [
+    {
+      "sender": "LifeMD",
+      "subject": "You have a new message from the LifeMD Front Desk",
+      "snippet": "A new message from the LifeMD Front Desk is waiting — click to read it in the patient portal.",
+      "important": true,
+      "category": "notification"
+    },
     {
       "sender": "no-reply@txt.texas.gov",
       "subject": "It's time to renew your registration",
-      "snippet": "Your 2014 Mazda (VIN ending 1256) registration expired December 2025 — this notice has been sitting since January and is now 4+ months overdue.",
+      "snippet": "Your 2014 Mazda (VIN ending 1256) registration expired December 2025 — this notice has been sitting unread since January and is now overdue.",
       "important": true,
       "category": "notification"
     },
     {
-      "sender": "LifeMD",
-      "subject": "Your appointment has been rescheduled",
-      "snippet": "Your LifeMD appointment has been rescheduled — log in to the patient portal to view the updated details.",
+      "sender": "Bambu Lab",
+      "subject": "Ready. Set. neXt.",
+      "snippet": "Bambu Lab is announcing something new on April 14, 2026 at 4 PM CEST — teaser with a notification sign-up link.",
+      "important": true,
+      "category": "newsletter"
+    },
+    {
+      "sender": "support@simplifyal.com",
+      "subject": "[Important] Your parcel's status has updated",
+      "snippet": "Order #40703M152169 (Adams Time Chart 2.0) has a tracking update — tracking number 9799615662145669815.",
       "important": true,
       "category": "notification"
     },
     {
-      "sender": "PayPal",
-      "subject": "Time to pick a monthly PayPal Debit category",
-      "snippet": "Time to choose your 5% cash back category for your PayPal Debit Card for this month.",
-      "important": true,
-      "category": "notification"
-    },
-    {
-      "sender": "NASASpaceflight.com",
-      "subject": "A shipment from order #69301 is on the way",
-      "snippet": "Your NASASpaceflight.com order #69301 is en route — DHL eCommerce tracking available.",
+      "sender": "Cults3D",
+      "subject": "🎉Download notification Walksnail VTX and Antenna Mount for Apex HD Frame",
+      "snippet": "Community member rklajda downloaded your Walksnail VTX and Antenna Mount design on Cults3D.",
       "important": false,
       "category": "notification"
     },
     {
-      "sender": "FAA DroneZone",
-      "subject": "UAS Registration Renewal Reminder",
-      "snippet": "Your UAS drone registration will expire within 180 days — renew at FAADroneZone to stay compliant.",
+      "sender": "support@simplifyal.com",
+      "subject": "Order Confirm",
+      "snippet": "Order #40703M152169 is confirmed and being prepared for shipment — visit their store or view the order for details.",
       "important": false,
       "category": "notification"
     },
     {
-      "sender": "The Neuron",
-      "subject": "😺 Too dangerous to release",
-      "snippet": "Today's AI newsletter covers a model deemed too dangerous to release, plus AI now autonomously renewing antidepressant prescriptions.",
+      "sender": "The Neuron Daily",
+      "subject": "😺 Do you have the wrong degree?",
+      "snippet": "Today's AI newsletter covers Claude for Word, the current AI coding stack, and Scale AI gig workers.",
       "important": false,
       "category": "newsletter"
     },
     {
-      "sender": "TLDR AI",
-      "subject": "OpenAI tests Image V2 🖼️, Google debuts Jules V2 🤖, analyzing OpenAI's $122B raise 💰",
-      "snippet": "OpenAI is testing its next-gen Image V2 model with early improvements in UI design rendering.",
+      "sender": "Capitalist Academy Group",
+      "subject": "Weekly Watchlist is LIVE",
+      "snippet": "This week's stock watchlist is live — email walks through how it was built using their system.",
       "important": false,
       "category": "newsletter"
     },
     {
-      "sender": "TLDR Dev",
-      "subject": "Context engineering guide ⚙️, cult of vibe coding 🗿, GitHub's reliability issues 📉",
-      "snippet": "Study shows LLM accuracy drops from 95% to 60% as tokens in context window increase, plus a context engineering guide.",
-      "important": false,
-      "category": "newsletter"
-    },
-    {
-      "sender": "TLDR",
-      "subject": "Anthropic's revenue spike 📈, Sam Altman excludes CFO💼, how Meta builds context 🤖",
-      "snippet": "Anthropic's annual revenue run-rate has spiked to $30B+, now exceeding OpenAI's $24B run-rate.",
-      "important": false,
-      "category": "newsletter"
-    },
-    {
-      "sender": "The Neuron",
-      "subject": "😺 What does OpenAI see coming",
-      "snippet": "AI newsletter covering OpenAI's predictions for the future, plus Netflix and Meta's new open-source AI compromise.",
-      "important": false,
-      "category": "newsletter"
-    },
-    {
-      "sender": "Wheel Watchers Club",
-      "subject": "Spin Into Spring With Up to $5,000, Ryan!",
-      "snippet": "Wheel of Fortune promotional spring sweepstakes for up to $5,000.",
+      "sender": "StubHub",
+      "subject": "Your event lineup: George Strait",
+      "snippet": "Personalized event recommendations including George Strait on May 16, 2026 at Moody Center in Austin.",
       "important": false,
       "category": "marketing"
     }
   ],
   "unsubscribe_candidates": [
-    "The Neuron (theneuron@newsletter.theneurondaily.com)",
-    "TLDR AI (dan@tldrnewsletter.com)",
-    "TLDR Dev (dan@tldrnewsletter.com)",
-    "TLDR (dan@tldrnewsletter.com)",
-    "Wheel Watchers Club (WheelWatchersClub@email.wheeloffortune.com)"
+    "The Neuron Daily (theneuron@newsletter.theneurondaily.com)",
+    "Capitalist Academy Group (capitalistacademygroup@203623538.mailchimpapp.com)",
+    "StubHub events emails (events@mail.stubhub.com)",
+    "Bambu Lab newsletter (no-reply@news.bambulab.com)"
   ]
 }
