@@ -36,17 +36,17 @@
   },
   "MAGS": {
     "price": 65.76,
-    "prev_close": 66.31,
-    "change": -0.55,
-    "change_pct": -0.8294,
+    "prev_close": 66.2724,
+    "change": -0.5124,
+    "change_pct": -0.7732,
     "name": "Magnificent 7 ETF"
   },
   "FBTC": {
     "price": 66.44,
-    "prev_close": 67.5514,
-    "change": -1.1114,
-    "change_pct": -1.6453,
+    "prev_close": 67.5,
+    "change": -1.06,
+    "change_pct": -1.5704,
     "name": "Fidelity Crypto"
   },
-  "updated": "2026-04-20T21:03:24.335286+00:00"
+  "updated": "2026-04-20T21:33:40.445856+00:00"
 }
