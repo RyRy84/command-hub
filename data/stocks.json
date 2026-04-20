@@ -28,25 +28,25 @@
     "name": "Schwab Dividend"
   },
   "FXAIX": {
-    "price": 247.64,
+    "price": 247.06,
     "prev_close": 244.69,
-    "change": 2.95,
-    "change_pct": 1.2056,
+    "change": 2.37,
+    "change_pct": 0.9686,
     "name": "Fidelity S&P 500"
   },
   "MAGS": {
     "price": 65.76,
-    "prev_close": 66.2724,
-    "change": -0.5124,
-    "change_pct": -0.7732,
+    "prev_close": 66.31,
+    "change": -0.55,
+    "change_pct": -0.8294,
     "name": "Magnificent 7 ETF"
   },
   "FBTC": {
     "price": 66.44,
-    "prev_close": 67.5,
-    "change": -1.06,
-    "change_pct": -1.5704,
+    "prev_close": 67.5514,
+    "change": -1.1114,
+    "change_pct": -1.6453,
     "name": "Fidelity Crypto"
   },
-  "updated": "2026-04-20T21:33:40.445856+00:00"
+  "updated": "2026-04-20T22:04:16.517441+00:00"
 }
