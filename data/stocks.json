@@ -21,10 +21,10 @@
     "name": "NVIDIA"
   },
   "SCHD": {
-    "price": 31.195,
+    "price": 31.2,
     "prev_close": 31.4,
-    "change": -0.205,
-    "change_pct": -0.6529,
+    "change": -0.2,
+    "change_pct": -0.6369,
     "name": "Schwab Dividend"
   },
   "FXAIX": {
@@ -48,5 +48,5 @@
     "change_pct": -0.8651,
     "name": "Fidelity Crypto"
   },
-  "updated": "2026-04-24T20:23:02.363120+00:00"
+  "updated": "2026-04-24T20:49:59.675240+00:00"
 }
