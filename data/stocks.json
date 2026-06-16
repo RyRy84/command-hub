@@ -29,9 +29,9 @@
   },
   "FXAIX": {
     "price": 261.58,
-    "prev_close": 257.42,
-    "change": 4.16,
-    "change_pct": 1.616,
+    "prev_close": 258.73,
+    "change": 2.85,
+    "change_pct": 1.1015,
     "name": "Fidelity S&P 500"
   },
   "MAGS": {
@@ -48,5 +48,5 @@
     "change_pct": -0.9535,
     "name": "Fidelity Crypto"
   },
-  "updated": "2026-06-16T22:18:39.523907+00:00"
+  "updated": "2026-06-16T23:04:16.206694+00:00"
 }
