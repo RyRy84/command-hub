@@ -21,10 +21,10 @@
     "name": "NVIDIA"
   },
   "SCHD": {
-    "price": 32.5272,
+    "price": 32.53,
     "prev_close": 32.64,
-    "change": -0.1128,
-    "change_pct": -0.3456,
+    "change": -0.11,
+    "change_pct": -0.337,
     "name": "Schwab Dividend"
   },
   "FXAIX": {
@@ -35,18 +35,18 @@
     "name": "Fidelity S&P 500"
   },
   "MAGS": {
-    "price": 66.44,
+    "price": 66.42,
     "prev_close": 66.64,
-    "change": -0.2,
-    "change_pct": -0.3001,
+    "change": -0.22,
+    "change_pct": -0.3301,
     "name": "Magnificent 7 ETF"
   },
   "FBTC": {
-    "price": 57.11,
+    "price": 57.13,
     "prev_close": 57.68,
-    "change": -0.57,
-    "change_pct": -0.9882,
+    "change": -0.55,
+    "change_pct": -0.9535,
     "name": "Fidelity Crypto"
   },
-  "updated": "2026-06-16T20:11:30.763210+00:00"
+  "updated": "2026-06-16T21:20:06.002493+00:00"
 }
