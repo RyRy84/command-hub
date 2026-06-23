@@ -28,10 +28,10 @@
     "name": "Schwab Dividend"
   },
   "FXAIX": {
-    "price": 260.25,
+    "price": 256.52,
     "prev_close": 261.21,
-    "change": -0.96,
-    "change_pct": -0.3675,
+    "change": -4.69,
+    "change_pct": -1.7955,
     "name": "Fidelity S&P 500"
   },
   "MAGS": {
@@ -48,5 +48,5 @@
     "change_pct": -2.4281,
     "name": "Fidelity Crypto"
   },
-  "updated": "2026-06-23T21:19:44.859618+00:00"
+  "updated": "2026-06-23T22:01:11.887843+00:00"
 }
