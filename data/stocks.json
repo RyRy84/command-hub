@@ -1,6 +1,9 @@
 {
   "TSLA": {
-    "error": "Too Many Requests. Rate limited. Try after a while.",
+    "price": 350.25,
+    "prev_close": 349.34,
+    "change": 0.91,
+    "change_pct": 0.2605,
     "name": "Tesla"
   },
   "INTC": {
@@ -45,5 +48,5 @@
     "change_pct": 0.1603,
     "name": "Fidelity Crypto"
   },
-  "updated": "2026-08-25T22:10:20.260901+00:00"
+  "updated": "2026-08-25T22:47:20.653942+00:00"
 }
