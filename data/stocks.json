@@ -43,10 +43,10 @@
   },
   "FBTC": {
     "price": 73.47,
-    "prev_close": 72.31,
-    "change": 1.16,
-    "change_pct": 1.6042,
+    "prev_close": 72.22,
+    "change": 1.25,
+    "change_pct": 1.7308,
     "name": "Fidelity Crypto"
   },
-  "updated": "2026-10-21T21:59:29.503934+00:00"
+  "updated": "2026-10-22T00:37:13.673318+00:00"
 }
