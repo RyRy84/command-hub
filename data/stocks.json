@@ -1,52 +1,52 @@
 {
   "TSLA": {
-    "price": 383.56,
+    "price": 385.19,
     "prev_close": 395.85,
-    "change": -12.29,
-    "change_pct": -3.1047,
+    "change": -10.66,
+    "change_pct": -2.6929,
     "name": "Tesla"
   },
   "INTC": {
-    "price": 57.685,
+    "price": 58.27,
     "prev_close": 60.95,
-    "change": -3.265,
-    "change_pct": -5.3568,
+    "change": -2.68,
+    "change_pct": -4.397,
     "name": "Intel"
   },
   "NVDA": {
-    "price": 201.1328,
+    "price": 200.13,
     "prev_close": 208.11,
-    "change": -6.9772,
-    "change_pct": -3.3527,
+    "change": -7.98,
+    "change_pct": -3.8345,
     "name": "NVIDIA"
   },
   "SCHD": {
-    "price": 36.1765,
+    "price": 36.21,
     "prev_close": 35.51,
-    "change": 0.6665,
-    "change_pct": 1.8769,
+    "change": 0.7,
+    "change_pct": 1.9713,
     "name": "Schwab Dividend"
   },
   "FXAIX": {
-    "price": 263.13,
+    "price": 267.29,
     "prev_close": 262.17,
-    "change": 0.96,
-    "change_pct": 0.3662,
+    "change": 5.12,
+    "change_pct": 1.9529,
     "name": "Fidelity S&P 500"
   },
   "MAGS": {
-    "price": 70.525,
+    "price": 70.28,
     "prev_close": 68.8,
-    "change": 1.725,
-    "change_pct": 2.5073,
+    "change": 1.48,
+    "change_pct": 2.1512,
     "name": "Magnificent 7 ETF"
   },
   "FBTC": {
-    "price": 69.67,
+    "price": 69.6,
     "prev_close": 67.39,
-    "change": 2.28,
-    "change_pct": 3.3833,
+    "change": 2.21,
+    "change_pct": 3.2794,
     "name": "Fidelity Crypto"
   },
-  "updated": "2026-11-04T20:43:30.195399+00:00"
+  "updated": "2026-11-05T01:05:43.115213+00:00"
 }
